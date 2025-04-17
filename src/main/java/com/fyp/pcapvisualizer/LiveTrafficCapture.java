@@ -21,14 +21,14 @@ public class LiveTrafficCapture {
     public static List<PacketData> captureLivePackets(int interfaceIndex) throws PcapNativeException, NotOpenException {
         List<PacketData> packetList = new ArrayList<>();
 
-        // Get a list of available network interfaces
+        // gets a list of available network interfaces
         List<PcapNetworkInterface> interfaces = Pcaps.findAllDevs();
         if (interfaces == null || interfaces.isEmpty()) {
             System.out.println("No network interfaces found!");
             return packetList;
         }
 
-        // Validate selected interface index
+        // validates selected interface index
         if (interfaceIndex < 0 || interfaceIndex >= interfaces.size()) {
             System.out.println("Invalid network interface selected.");
             return packetList;
@@ -37,7 +37,7 @@ public class LiveTrafficCapture {
         PcapNetworkInterface nif = interfaces.get(interfaceIndex);
         System.out.println("Capturing live traffic on: " + nif.getName());
 
-        // Open a live capture handle
+        // opens a live capture handle
         PcapHandle handle = nif.openLive(
                 SNAP_LEN, 
                 PcapNetworkInterface.PromiscuousMode.PROMISCUOUS, 
@@ -52,7 +52,7 @@ public class LiveTrafficCapture {
                 PacketData packetData = PcapParser.parsePacket(packet, timestamp);
                 packetList.add(packetData);
 
-                // Store in database
+                // stores in database
                 DatabaseHelper.insertPackets(List.of(packetData));
 
                 System.out.println("Captured: " + packetData.getTimestamp() + " | " + packetData.getSrcIP() + " → " + packetData.getDstIP() +

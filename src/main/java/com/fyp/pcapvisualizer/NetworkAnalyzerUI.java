@@ -177,7 +177,7 @@ public class NetworkAnalyzerUI {
         graphPanels.clear();
         cardPanel.removeAll();
         
-        loadAllCharts();  // This adds all graphs into cardPanel via addGraphPanel()
+        loadAllCharts();  
 
         JPanel allGraphsContent = new JPanel(new GridLayout(3, 2, 20, 20));
         allGraphsContent.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
