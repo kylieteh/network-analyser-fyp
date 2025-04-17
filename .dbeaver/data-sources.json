@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-1948fd571f5-187b92ac6c9a492a": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "sample.db",
+			"save-password": true,
+			"configuration": {
+				"database": "C:\\Users\\HP USER\\eclipse-workspace\\network-visualizer\\sample.db",
+				"url": "jdbc:sqlite:C:\\Users\\HP USER\\eclipse-workspace\\network-visualizer\\sample.db",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}

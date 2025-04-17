@@ -1,0 +1,47 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-19489da77ba-589ca1a7566229a8": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "SQLite",
+			"save-password": true,
+			"configuration": {
+				"url": "jdbc:sqlite:sample.db",
+				"configurationType": "URL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		},
+		"sqlite_jdbc-1948ee508ce-7234c457e4182a74": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "SQLite 2",
+			"save-password": true,
+			"configuration": {
+				"url": "jdbc:sqlite:sample.db",
+				"configurationType": "URL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
